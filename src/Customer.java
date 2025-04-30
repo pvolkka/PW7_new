@@ -1,17 +1,17 @@
 public class Customer {
-    private String name; //ім'я покупця
-    private byte age; //вік покупця
-    private double money; //кількість грошей в покупця
-    private double outlay; //витрата покупця
+    private String name; //ім'я покупця. Зазначено модифікатор доступу private, щоб уникнути неконтрольованих змін.
+    private byte age; //вік покупця. Зазначено модифікатор доступу private, щоб уникнути неконтрольованих змін.
+    private double money; //кількість грошей в покупця. Зазначено модифікатор доступу private, щоб уникнути неконтрольованих змін.
+    private double outlay; //витрата покупця. Зазначено модифікатор доступу private, щоб уникнути неконтрольованих змін.
 
-    public Customer(String name, byte age, double money, double outlay) { //конструктор
+    public Customer(String name, byte age, double money, double outlay) { //конструктор. Зазначено модифікатор доступу public, щоб об'єкти можна було створювати з інших класів.
         this.name = name;
         this.age = age;
         this.money = money;
         this.outlay = outlay;
     }
 
-    public String getName() { //геттер для характеристики name
+    public String getName() { //геттер для характеристики name. Зазначено модифікатор доступу public, тому що при його зміні на private сенс існування геттерів та сеттерів зникне.
         return name;
     }
     public void setName(String name) { //сеттер для характеристики name. ім'я встановиться тільки якщо змінна name щось зберігає.
